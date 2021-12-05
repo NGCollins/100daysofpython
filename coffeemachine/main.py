@@ -67,7 +67,7 @@ def take_money(drink):
             if money_amount_inserted > drink_cost:
                 # TODO need to implement feature for figuring out which coins to return using modula
                 change = money_amount_inserted - drink_cost
-                print(f"Please take your change. {change}")
+                print(f"Please take your change. {str(round(change,2))}")
                 MONEY_TOTAL = + drink_cost
 
 
@@ -137,7 +137,7 @@ def coffee_machine():
             return
         elif users_coffee_choice == "report":
             print(
-                f"Water: {water_amount_left}ml\nMilk: {milk_amount_left}ml\nCoffee: {coffee_amount_left}g\nMoney: ${money_amount_collected}")
+                f"Water: {water_amount_left}ml\nMilk: {milk_amount_left}ml\nCoffee: {coffee_amount_left}g\nMoney: ${MONEY_TOTAL}")
 
 
 coffee_machine()
